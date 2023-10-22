@@ -1,0 +1,67 @@
+<div class="card">
+	<div [ngClass]="['top-ranking', plan.topRanking === false ? 'hidden' : '']">
+	  ⭐ ¡MÁS VENDIDO!
+	</div>
+	<h4>{{ plan.plan }}</h4>
+	<h5>{{ plan.type }}</h5>
+	<div class="price-table">
+	  <div class="left">
+		<h2>{{ plan.mbps }}</h2>
+		<p class="speed">{{ plan.speed }}</p>
+	  </div>
+	  <div class="right">
+		<h3 class="price">S/
+		  <span class="big-price">{{ plan.mainPrice }}</span>
+		  <span class="small-price">{{ plan.secondPrice }} {{ plan.months }}</span>
+		</h3>
+		<p class="speed">{{ plan.regularPrice }}</p>
+	  </div>
+	</div>
+	<p class="install">{{ plan.install }}</p>
+	<p class="prev">{{ plan.note }}</p>
+	<div class="btn-main-content">
+	  <button class="btn-main">{{ plan.mainButton }}</button>
+	  <button class="btn-second">{{ plan.secondButton }}</button>
+	</div>
+	<a (click)="toggleDiv()" class="link-drop">
+	  {{ divVisible ? 'Ver menos' : 'Ver más beneficios' }}
+	  <img src="assets/images/plans/icons-apps/arrow.png" alt="arrow" [ngClass]="divVisible ? 'rotate' : 'normal'" />
+	</a>
+	<div class="divDrop" *ngIf="divVisible">
+	  <h5>{{ plan.appsTitle }}</h5>
+	  <div class="apps">
+		<img *ngFor="let item of plan.apps; let index = index" [src]="item" alt="social-media" />
+	  </div>
+	  <div [ngClass]="['bono', plan.promoTitle === undefined ? 'hidden' : '']">
+		<h4>{{ plan.promoTitle }}</h4>
+		<p>{{ plan.bonoTxt }} <span>{{ plan.bonoMonth }}</span></p>
+	  </div>
+	  <div class="promo-1">
+		<div class="promo-left">
+		  <div class="bullet">
+			<img [src]="plan.bonoIcon1" alt="social-media" />
+			<p>{{ plan.bonoGb1 }}</p>
+		  </div>
+		  <p>{{ plan.bonoGb1a }}</p>
+		</div>
+		<div class="promo-right">
+		  <h6>{{ plan.bonoGbTxt1 }} <span>GB</span></h6>
+		  <p>{{ plan.bonoGbMonth1 }}</p>
+		</div>
+	  </div>
+	  <div class="promo-2">
+		<div class="promo-left">
+		  <img [src]="plan.bonoImg2" alt="Prime" />
+		</div>
+		<div class="promo-right">
+		  <h6>{{ plan.bonoGbTxt2 }}</h6>
+		  <p>{{ plan.bonoGbMonth2 }}</p>
+		</div>
+	  </div>
+	  <div class="description">
+		<img [src]="plan.descriptionImg" alt="Prime" />
+		<p>{{ plan.description }}</p>
+	  </div>
+	</div>
+  </div>
+  

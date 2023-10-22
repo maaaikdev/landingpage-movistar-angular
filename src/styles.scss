@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    font-family: 'Telefonica-Regular';
+    margin: 0;
+};
+
+@font-face {
+	font-family: 'Telefonica-ExtraLight'; /* Nombre de la fuente personalizada */
+	src: url('/assets/fonts/Telefonica-ExtraLight.ttf') format('truetype'); /* Ruta al archivo de fuente */
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Telefonica-Light'; /* Nombre de la fuente personalizada */
+	src: url('/assets/fonts/Telefonica-Light.ttf') format('truetype'); /* Ruta al archivo de fuente */
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Telefonica-Regular'; /* Nombre de la fuente personalizada */
+	src: url('/assets/fonts/Telefonica-Regular.ttf') format('truetype'); /* Ruta al archivo de fuente */
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TelefonicaCap-Regular'; /* Nombre de la fuente personalizada */
+	src: url('/assets/fonts/TelefonicaCap-Regular.ttf') format('truetype'); /* Ruta al archivo de fuente */
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Telefonica-RegularItalic'; /* Nombre de la fuente personalizada */
+	src: url('/assets/fonts/Telefonica-RegularItalic.ttf') format('truetype'); /* Ruta al archivo de fuente */
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Telefonica-Bold'; /* Nombre de la fuente personalizada */
+	src: url('/assets/fonts/Telefonica-Bold.ttf') format('truetype'); /* Ruta al archivo de fuente */
+	font-weight: normal;
+	font-style: normal;
+}

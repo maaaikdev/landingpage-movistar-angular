@@ -1,0 +1,32 @@
+<nav>
+    <div class="black-nav">
+      <ul>
+        <li *ngFor="let item of topMenu; let i = index">{{ item }}</li>
+      </ul>
+    </div>
+    <div [ngClass]="{ 'menu': true, 'responsive-menu': isMenuOpen }">
+      <div [ngClass]="['logo-movistar', isMenuOpen ? 'shadow' : '']">
+        <img src="assets/images/nav/m-logo.png" alt="Movistar logo" class="logo" />
+      </div>
+      <ul [ngClass]="{ 'menu-items': true, 'open': isMenuOpen }">
+        <li *ngFor="let item of mainMenu; let i = index" class="item">
+          {{ item }}
+          <img src="assets/images/nav/arrow.png" alt="Arrow" class="arrow" />
+        </li>
+        <li class="item-offer">
+          <img src="assets/images/nav/fire.png" alt="Arrow" class="arrow" />
+          Ofertas
+        </li>
+      </ul>
+      <button [ngClass]="['btn-second', isMenuOpen ? 'open' : '']">App Mi Movistar</button>
+      <div [ngClass]="['menu-icons', isMenuOpen ? 'hidden' : '']">
+        <button *ngFor="let icon of mainIcons; let i = index" [ngClass]="['btn-icon', icon.name === 'Orders' ? 'hidden' : '']">
+          <img [src]="icon.icon" alt="{{ icon.name }}" />
+        </button>
+      </div>
+      <button [ngClass]="['menu-toggle', isMenuOpen ? 'reposition' : '']" (click)="toggleMenu()">
+        <img [src]="isMenuOpen ? 'assets/images/nav/cerrar.png' : 'assets/images/nav/menu.png'" alt="Menu" />
+      </button>
+    </div>
+  </nav>
+  

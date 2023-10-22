@@ -1,0 +1,33 @@
+<div class="content-plans">
+    <ng-container *ngIf="data; else loadingData">
+        <app-plans-cards *ngFor="let plan of data; let i = index" [plan]="plan"></app-plans-cards>
+    </ng-container>
+    <ng-template #loadingData>
+        <p>Cargando JSON...</p>
+    </ng-template>
+</div>
+  
+<div class="include">
+    <h3>Todos nuestros planes de Internet Fibra Óptica <span>también incluyen</span></h3>
+    <div class="includes-box">
+        <div class="box">
+            <div class="img-box">
+                <img src="assets/images/plans/smartwifi-icon.png" alt="modem" />
+            </div>
+            <div class="content-box">
+                <h4>Módem Smart WiFi</h4>
+                <p>2.4GHz y 5GHz</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="img-box">
+                <img src="assets/images/plans/smartwifi-icon.png" alt="modem" />
+            </div>
+            <div class="content-box">
+                <h4>Sigue tu instalación</h4>
+                <p>Puedes seguir tu instalación en línea</p>
+            </div>
+        </div>
+    </div>
+</div>
+  
